@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { CustomersComponent } from './customers/customers.component';
 import { AppMaterialCustomModule } from './/app-material-custom.module';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +15,8 @@ import { AppMaterialCustomModule } from './/app-material-custom.module';
   ],
   imports: [
     BrowserModule,
-    AppMaterialCustomModule
+    AppMaterialCustomModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
