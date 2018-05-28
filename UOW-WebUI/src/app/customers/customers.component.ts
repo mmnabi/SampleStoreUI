@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CUSTOMERS } from '../models/mock-customers';
 
 @Component({
   selector: 'app-customers',
@@ -11,5 +12,7 @@ export class CustomersComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  customers = CUSTOMERS;
 
 }
