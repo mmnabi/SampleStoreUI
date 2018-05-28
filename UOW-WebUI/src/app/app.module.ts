@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CustomersComponent } from './customers/customers.component';
+import { AppMaterialCustomModule } from './/app-material-custom.module';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +12,8 @@ import { CustomersComponent } from './customers/customers.component';
     CustomersComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppMaterialCustomModule
   ],
   providers: [],
   bootstrap: [AppComponent]

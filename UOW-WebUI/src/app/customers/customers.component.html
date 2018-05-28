@@ -1,6 +1,9 @@
-<h2>My Heroes</h2>
-<ul>
-  <li *ngFor="let customer of customers">
-    <span>{{customer.id}}</span> {{customer.firstName}}
-  </li>
-</ul>
+<mat-list>
+  <h3 mat-subheader>Customers</h3>
+  <mat-list-item *ngFor="let customer of customers">
+    <mat-icon mat-list-icon>person</mat-icon>
+    <h4 mat-line>{{customer.id}}</h4>
+    <p mat-line> {{customer.firstName}} </p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
