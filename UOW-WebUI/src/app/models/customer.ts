@@ -6,3 +6,15 @@ export class Customer {
     country: string;
     phone: string;
 }
+
+export interface CustomerListViewModel {
+    customers: Customer[];
+    pagingInfo: PagingInfo;
+}
+
+export interface PagingInfo {
+    totalItems: string;
+    itemsPerPage: string;
+    currentPage: string;
+    totalPages: string;
+}
