@@ -8,7 +8,7 @@ import { AppMaterialCustomModule } from './/app-material-custom.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
-import { MessagesComponent } from './messages/messages.component'
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({

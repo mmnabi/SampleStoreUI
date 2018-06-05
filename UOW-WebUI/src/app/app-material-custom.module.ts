@@ -7,7 +7,11 @@ import {
   MatCheckboxModule,
   MatListModule,
   MatCardModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatTableModule,
+  MatProgressSpinnerModule,
+  MatPaginatorModule,
+  MatSortModule
 } from '@angular/material';
 
 @NgModule({
@@ -19,7 +23,11 @@ import {
     MatCheckboxModule,
     MatListModule,
     MatCardModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   exports: [
     MatSidenavModule,
@@ -29,7 +37,11 @@ import {
     MatCheckboxModule,
     MatListModule,
     MatCardModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   declarations: []
 })

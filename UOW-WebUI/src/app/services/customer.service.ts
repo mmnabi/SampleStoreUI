@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Customer } from '../models/customer';
+import { Customer, CustomerListViewModel } from '../models/customer';
 import { CUSTOMERS } from '../models/mock-customers';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -27,6 +27,7 @@ export class CustomerService {
   ) { }
 
   private customersUrl = 'http://localhost/UOW/api/customers/';
+  private endUrl: string;
 
   getCustomers(): Observable<Customer[]> {
     // return of(CUSTOMERS);
@@ -34,6 +35,17 @@ export class CustomerService {
     .pipe(
       tap(heroes => this.message.openSnackBar('Customers Loaded.')),
       catchError(this.message.handleError('getHeroes', []))
+    );
+  }
+
+  getCustomersPaged(page: number, size: number): Observable<CustomerListViewModel> {
+    page++;
+    size++;
+    this.endUrl = 'page' + page + "/size" + size;
+    return this.http.get<CustomerListViewModel>(this.customersUrl+this.endUrl, httpOptions)
+    .pipe(
+      tap(heroes => this.message.openSnackBar('Customers Loaded.')),
+      catchError(this.message.handleError<CustomerListViewModel>('getHeroes'))
     );
   }
 }
