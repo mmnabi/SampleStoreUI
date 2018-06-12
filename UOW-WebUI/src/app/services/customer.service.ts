@@ -40,7 +40,6 @@ export class CustomerService {
 
   getCustomersPaged(page: number, size: number): Observable<CustomerListViewModel> {
     page++;
-    size++;
     this.endUrl = 'page' + page + "/size" + size;
     return this.http.get<CustomerListViewModel>(this.customersUrl+this.endUrl, httpOptions)
     .pipe(
